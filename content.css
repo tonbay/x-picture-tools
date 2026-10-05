@@ -1,0 +1,19 @@
+.xpt-shell{display:block;width:100%;min-width:0;box-sizing:border-box;margin:8px 0;font:13px system-ui;color:#71767b}
+.xpt-rail{position:static;display:flex;flex-direction:row;align-items:center;gap:5px;width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;padding:4px 0;font:13px system-ui;color:#71767b}
+.xpt-rail button{font:inherit;cursor:pointer;box-sizing:border-box;border:0;background:transparent;color:#71767b;height:36px;min-width:36px;border-radius:30px;padding:7px 10px;display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;flex-shrink:0;transition:background .15s,color .15s}
+.xpt-rail button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.xpt-rail button:hover:not(:disabled){background:#1d9bf01a;color:#1d9bf0}
+.xpt-rail button.xpt-block:hover:not(:disabled){background:#f4212e1a;color:#f4212e}
+.xpt-rail button.xpt-following{color:#1d9bf0}
+.xpt-rail button:disabled{opacity:.5;cursor:wait}
+.xpt-rail button:focus-visible,.xpt-notice button:focus-visible{outline:2px solid #1d9bf0;outline-offset:2px}
+.xpt-categories{display:flex;flex-direction:row;gap:5px;align-items:center;border-inline:1px solid #71767b33;padding:0 6px;flex-shrink:0}
+.xpt-category span{max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.xpt-status{font:12px system-ui;color:#1d9bf0;line-height:1.6;padding:4px 8px;overflow-wrap:anywhere}
+.xpt-status progress{display:block;width:100%;max-width:300px;height:4px;margin-top:5px;accent-color:#1d9bf0}
+.xpt-notice{font:12px system-ui;line-height:1.7;padding:8px;color:#71767b;overflow-wrap:anywhere}
+.xpt-notice button{border:1px solid #536471;border-radius:20px;color:inherit;background:transparent;font:inherit;padding:4px 9px;cursor:pointer;margin-left:6px}
+.xpt-gallery-shell{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 144px);z-index:2147483646;background:rgba(0,0,0,.85);border:1px solid #2f3336;border-radius:16px;margin:0;padding:6px 8px}
+.xpt-gallery-shell .xpt-status{max-width:420px}.xpt-gallery-shell .xpt-notice{max-width:420px}
+.xpt-toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%);z-index:2147483647;background:#1d9bf0;color:#fff;padding:12px 18px;border-radius:8px;font:14px system-ui;max-width:80vw}
+@media(max-width:480px){.xpt-gallery-shell{bottom:12px;max-width:calc(100vw - 104px)}}

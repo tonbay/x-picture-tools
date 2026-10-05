@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "minimum_chrome_version": "116",
+  "name": "X 圖片分類工具",
+  "version": "0.3.2",
+  "description": "作者跟隨狀態、封鎖、圖片分類下載與 Discord 分享。",
+  "permissions": ["storage", "downloads", "clipboardWrite", "offscreen"],
+  "host_permissions": ["https://pbs.twimg.com/*", "https://video.twimg.com/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_title": "設定圖片分類"},
+  "options_page": "options.html",
+  "content_scripts": [
+    {"matches": ["https://x.com/*", "https://twitter.com/*"], "js": ["observe.js"], "run_at": "document_start", "world": "MAIN"},
+    {"matches": ["https://x.com/*", "https://twitter.com/*"], "js": ["common.js", "content.js"], "css": ["content.css"], "run_at": "document_start"}
+  ]
+}
